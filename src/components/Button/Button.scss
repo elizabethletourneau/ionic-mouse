@@ -58,6 +58,7 @@ $themes: (
     border-radius: 4px;
     padding: 0.5em 1em;
     color: themes(buttonTextColor);
+    height: 40px;
 
     &:active{
         transform: translateY(1px);
@@ -82,4 +83,31 @@ $themes: (
     &::-moz-focus-inner {
         border: none;
     }  
+}
+
+.LightButton {
+    border-radius: 2px;
+    background-color: transparent;
+    border-color: themes(buttonColor);
+    color: themes(buttonColor) ;
+
+    &:hover {
+        color: themes(buttonTextHoverColor);
+        border-color: currentColor;
+        background-color: themes(buttonHoverColor);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px #fff,
+            0 0 0 1.5px #fff;
+    }
+
+
+    outline: none;
+
+    &::-moz-focus-inner {
+        border: none;
+    }
+
 }
