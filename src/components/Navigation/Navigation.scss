@@ -1,0 +1,36 @@
+@import '../../themes/theme.scss';
+
+.Navigation{
+    height: 60px;
+    background-color: themes(darkBackgroundColor);
+    width: 100%;
+    margin: 0;
+    padding:  0 16px;
+    font-family: themes(fontFamily);
+    display: flex;
+       align-items: center;
+           align-content: center;
+}
+
+.NavigationItem {
+ 
+
+
+    cursor: pointer;
+    margin: 0 8px;
+    color: themes(buttonColor);
+    &:hover {
+        border-bottom: 2px solid;
+        color: themes(buttonTextHoverColor);
+        border-bottom-color: currentColor;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px #fff,
+            0 0 0 1.5px #fff;
+    }
+    outline: none;
+    &::-moz-focus-inner {
+        border: none;
+    }
+}

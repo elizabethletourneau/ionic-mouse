@@ -1,0 +1,7 @@
+@import '../../../../themes/theme.scss';
+
+.Filler {
+    background-color: themes(primaryColor);
+    height: 10px;
+    transition : width 3s ease;
+}

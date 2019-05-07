@@ -4,7 +4,6 @@ import styles from './Layout.scss';
 class Layout extends Component {
 
 
-
     render() {
         return (
             <div className={styles.Container}>

@@ -7,13 +7,13 @@ class Button extends Component {
 
     render() {
 
-        const { light } = this.props;
+        const { light, onPress, children } = this.props;
         const buttonClass = classNames( styles.Button, light && styles.LightButton);
-        
+
 
         return (
-            <button className={buttonClass}>{this.props.children}</button>
-        );
+            <button onClick={onPress} className={buttonClass}>{children}</button>
+        )
     }
 }
 
