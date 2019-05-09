@@ -7,7 +7,7 @@ ReactDOM.render(
     <App/>,
     document.getElementById('rooot')
 );
- 
+
 if (module.hot) {
   module.hot.accept();
 }

@@ -2,7 +2,7 @@
 
 .Navigation{
     height: 60px;
-    background-color: themes(darkBackgroundColor);
+    background-color: themes(primaryColor);
     width: 100%;
     margin: 0;
     padding:  0 16px;
@@ -10,27 +10,55 @@
     display: flex;
        align-items: center;
            align-content: center;
+
+    &.DarkNavigation{
+        background-color: themes(darkBackgroundColor);
+    }
 }
 
 .NavigationItem {
- 
+
 
 
     cursor: pointer;
     margin: 0 8px;
-    color: themes(buttonColor);
+    color: themes(lightButtonColor);
     &:hover {
         border-bottom: 2px solid;
-        color: themes(buttonTextHoverColor);
+        color: themes(lightButtonTextHoverColor);
         border-bottom-color: currentColor;
     }
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 3px #fff,
-            0 0 0 1.5px #fff;
+        box-shadow: 0 0 0 3px #000,
+            0 0 0 1.5px #000;
     }
     outline: none;
     &::-moz-focus-inner {
         border: none;
     }
+
+    &.DarkItem {
+        color: themes(buttonColor);
+
+            &:hover {
+                border-bottom: 2px solid;
+                color: themes(buttonTextHoverColor);
+                border-bottom-color: currentColor;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px #fff,
+                    0 0 0 1.5px #fff;
+            }
+
+            outline: none;
+
+            &::-moz-focus-inner {
+                border: none;
+            }
+        }
+
+
 }

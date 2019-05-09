@@ -7,6 +7,7 @@ import Layout from './components/Layout';
 import ProgressBar from './components/ProgressBar';
 import LineChart from './components/LineChart';
 import Table from './components/Table';
+import styles from "./themes/theme.scss";
 
 const ThemeContext = React.createContext('light');
 
@@ -47,27 +48,28 @@ class App extends Component {
         ];
 
         return (
-
-            <ThemeContext.Provider value="dark">
-                <Layout>
-                    <Navigation action items={items} ></Navigation>
-                </Layout>
-                <Layout>
-                    <div>
-                    <Heading>My Heading</Heading>
-                        <Button onPress={this.onPercentageChange}>Button</Button>
-                    </div>
-                </Layout>
-                <Layout>
-                    <ProgressBar percentage={this.state.percentage}/>
-                </Layout>
-                {/* <Layout>
+          <ThemeContext.Provider value="dark">
+            <Layout>
+              <Navigation  action items={items} />
+            </Layout>
+            <Layout>
+              <div>
+                <Heading>My Heading</Heading>
+                <Button onPress={this.onPercentageChange}>
+                  Button
+                </Button>
+              </div>
+            </Layout>
+            <Layout>
+              <ProgressBar percentage={this.state.percentage} />
+            </Layout>
+            {/* <Layout>
                     <LineChart/>
                 </Layout> */}
-                <Layout>
-                <Table></Table>
-                </Layout>
-            </ThemeContext.Provider>
+            <Layout>
+              <Table />
+            </Layout>
+          </ThemeContext.Provider>
         );
     }
 }

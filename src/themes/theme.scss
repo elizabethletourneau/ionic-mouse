@@ -1,6 +1,7 @@
 
 
 $themes: (
+charcoal: #36454F,
 primaryColor: #A3C6C4,
 backgroundColor: #E0E7E9,
 darkBackgroundColor: #354649,
@@ -8,7 +9,9 @@ textColor: #354649,
 buttonTextColor: #6C7A89,
 buttonTextTransform: none,
 buttonTextHoverColor: #E0E7E9,
+darkButtonTextHoverColor: #354649,
 buttonColor: #A3C6C4,
+darkButtonColor: #36454F,
 buttonBorder: 2px solid #fff,
 buttonHoverColor: #6C7A89,
 boxShadow: "rgba(163, 198, 196) 0.5)",
@@ -33,4 +36,10 @@ fontSize: 10px,
 
     @warn "Unknown `#{$key}` in $themes.";
     @return null;
+}
+
+body {
+   background-color: #36454F;
+   margin: 0;
+   padding: 0;
 }
