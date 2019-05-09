@@ -15,13 +15,13 @@ To contribute:
 
 
 ## In Progress:
--`LineChart` component
--`Table` component
--documentation on existing components
--Example Dashboard
+- `LineChart` component
+- `Table` component
+- documentation on existing components
+- Example Dashboard
 
 
 ## On Deck
 - Add Storybook dependency
 - Add proper CSS transitions
--
+- ...
