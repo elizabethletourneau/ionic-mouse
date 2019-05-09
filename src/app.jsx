@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import Layout from './components/Layout';
 import ProgressBar from './components/ProgressBar';
 import LineChart from './components/LineChart';
+import Table from './components/Table';
 
 const ThemeContext = React.createContext('light');
 
@@ -60,8 +61,11 @@ class App extends Component {
                 <Layout>
                     <ProgressBar percentage={this.state.percentage}/>
                 </Layout>
-                <Layout>
+                {/* <Layout>
                     <LineChart/>
+                </Layout> */}
+                <Layout>
+                <Table></Table>
                 </Layout>
             </ThemeContext.Provider>
         );
