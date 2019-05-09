@@ -14,14 +14,14 @@ To contribute:
 4- submit a pull request and @elizabethletourneau to approve ✅
 
 
-##In Progress:
+## In Progress:
 -`LineChart` component
 -`Table` component
 -documentation on existing components
 -Example Dashboard
 
 
-##On Deck
+## On Deck
 - Add Storybook dependency
 - Add proper CSS transitions
 -
