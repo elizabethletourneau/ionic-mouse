@@ -22,10 +22,10 @@
 
     cursor: pointer;
     margin: 0 8px;
-    color: themes(lightButtonColor);
+    color: themes(darkButtonColor);
     &:hover {
         border-bottom: 2px solid;
-        color: themes(lightButtonTextHoverColor);
+        color: themes(darkButtonTextHoverColor);
         border-bottom-color: currentColor;
     }
     &:focus {

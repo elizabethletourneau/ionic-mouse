@@ -1,5 +1,24 @@
 @import '../../themes/theme.scss';
 
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-color: transparent;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    border-collapse: collapse;
+}
+
 table{
     font-family: themes(fontFamily);
     margin: 15px;
@@ -7,9 +26,16 @@ table{
 
 th {
     background-color: themes(backgroundColor);
+    border: 1px solid themes(backgroundColor);
+    padding: 2px 2px 2px 2px;
 }
 
 tr {
     border-bottom: 1px solid themes(primaryColor);
     background-color: #fff;
+}
+
+td {
+    border-right: 1px solid themes(primaryColor);
+    padding: 2px 2px 2px 2px;
 }

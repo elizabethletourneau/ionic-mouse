@@ -2,46 +2,67 @@ import React, { Component } from 'react';
 import styles from './Table.scss';
 
 class Table extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    // this.state = {
-    //   data = this.props.data
-    // }
-  }
-    render() {
-
-      const data = {
-      headers: [
-        "Push Ups",
-        "Design System",
-        "Other"
-      ],
-    values: [
-      [24, 25, 27],
-      [60, 20, 40],
-      [1, 2, 3]
-      ]
+    this.state = {
+      headers: this.props.data.headers,
+      values: this.props.data.values
     };
+  }
 
-      const headers = data.headers.map((header)=>{
-        return <th key={header}>{header}</th>;
-      });
+  totalHeaders() {
+    const { values, headers } = this.state;
 
-      const values = data.values.map((value, index )=> {
-        return <tr key={index}>{value.map((item, index)=>{
-          return <td key={index}>{item}</td>
-        })}</tr>;
-      });
+    const valueLengths = values.map(list => {
+      return list.length;
+    });
+    const maxLength = Math.max(...valueLengths);
+    return maxLength > headers.length
+      ? Math.ceil(maxLength / headers.length)
+      : 1;
+  }
 
-        return (
-          <table style={{ width: "100%" }}>
-            <thead>
-              <tr>{headers}</tr>
-            </thead>
-            <tbody>{values}</tbody>
-          </table>
-        );
-    }
+  totalColumns(items) {
+    const { headers } = this.state;
+    return items.length < headers.length ? Math.ceil(headers.length/items.length) : 1;
+  }
+
+  render() {
+    const { headers, values } = this.state;
+
+    const headerMarkup = headers.map(header => {
+      return (
+        <th colSpan={this.totalHeaders()} key={header}>
+          {header}
+        </th>
+      );
+    });
+
+    const valueMarkup = values.map((value, index) => {
+      return (
+        <tr key={index}>
+          {value.map((item, index) => {
+            return (
+              <td colSpan={this.totalColumns(value)} key={index}>
+                {item}
+              </td>
+            );
+          })}
+        </tr>
+      );
+    });
+
+    return (
+      <table style={{ width: "100%" }}>
+        <thead>
+          <tr>{headerMarkup}</tr>
+        </thead>
+        <tbody>{valueMarkup}</tbody>
+      </table>
+    );
+  }
 }
+
+
 
 export default Table;

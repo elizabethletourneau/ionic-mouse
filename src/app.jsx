@@ -31,6 +31,20 @@ class App extends Component {
 
     render() {
 
+        const data = {
+                headers: ["Day"],
+                values: [["Push Ups", 20], ["Design System", 8], ['Calorie Deficit', `✅`]]
+              };
+
+           const data2 = {
+             headers: ["Day", 1],
+             values: [
+               ["Pull Ups"],
+               ["Design System", 8],
+               ["Calorie Deficit", `✅`]
+             ]
+           };
+
 
         const items = [
             {
@@ -50,24 +64,10 @@ class App extends Component {
         return (
           <ThemeContext.Provider value="dark">
             <Layout>
-              <Navigation  action items={items} />
+              <Navigation action items={items} />
             </Layout>
             <Layout>
-              <div>
-                <Heading>My Heading</Heading>
-                <Button onPress={this.onPercentageChange}>
-                  Button
-                </Button>
-              </div>
-            </Layout>
-            <Layout>
-              <ProgressBar percentage={this.state.percentage} />
-            </Layout>
-            {/* <Layout>
-                    <LineChart/>
-                </Layout> */}
-            <Layout>
-              <Table />
+              <Table data={data} />
             </Layout>
           </ThemeContext.Provider>
         );
