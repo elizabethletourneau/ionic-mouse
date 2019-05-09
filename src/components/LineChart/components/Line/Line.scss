@@ -1,0 +1,33 @@
+@import '../../../../themes/theme.scss';
+
+.Line {
+    width: 50px;
+    height: 4px;
+    background-color: yellow;
+    transform: skew(90deg);
+
+    // &:hover {
+    //     transform: skew(90deg);
+    // }
+}
+
+.example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 3000ms ease-in;
+
+}
+
+.example-leave {
+    opacity: 1;
+    background-color: blue;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+    background-color: blue;
+}

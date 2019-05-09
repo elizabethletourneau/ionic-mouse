@@ -1,0 +1,9 @@
+@import '../../themes/theme.scss';
+
+.Axis {
+    border-bottom: 1px solid themes(darkBackgroundColor);
+    border-left: 1px solid themes(darkBackgroundColor);
+    width: 500px;
+    height: 500px;
+    display: flex;
+}
