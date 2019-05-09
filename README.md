@@ -4,6 +4,7 @@ A Simple React Design System
 This is a work-in-progress project that hopes to be a robust dashboard design system.
 
 To contribute:
+
 1- clone the repo 🆕
 
 2- `npm install` the dependencies
