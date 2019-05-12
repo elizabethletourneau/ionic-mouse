@@ -1,9 +1,10 @@
 @import '../../themes/theme.scss';
 
 .Axis {
-    border-bottom: 1px solid themes(darkBackgroundColor);
-    border-left: 1px solid themes(darkBackgroundColor);
+    border-bottom: 3px solid themes(backgroundColor);
+    border-left: 3px solid themes(backgroundColor);
     width: 500px;
     height: 500px;
     display: flex;
+    position: relative;
 }

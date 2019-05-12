@@ -1,20 +1,23 @@
-import React, { Component } from 'react';
-import styles from './LineChart.scss';
-import {Line}  from './components';
+import React, { Component } from "react";
+import styles from "./LineChart.scss";
+import { Line } from "./components";
 
 class LineChart extends Component {
-
-  //   x = [10, 20, 30, 20, 40];
   //   y = [10, 30, 20, 10, 30];
 
+  render() {
+    const data = [
+      { x: 10, y: 30 },
+      { x: 20, y: 10 },
+      { x: 30, y: 30 },
+      { x: 40, y: 20 },
+      { x: 50, y: 50 },
+      { x: 60, y: 10 }
+    ];
+    const lines = data.map(value => <Line y={value.y} />);
 
-    render() {
-        return (
-            <div className={styles.Axis}>
-                <Line></Line>
-            </div>
-        );
-    }
+    return <div className={styles.Axis}>{lines}</div>;
+  }
 }
 
 export default LineChart;
