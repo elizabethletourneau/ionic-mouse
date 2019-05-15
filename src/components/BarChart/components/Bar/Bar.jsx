@@ -5,18 +5,18 @@ import styles from "./Bar.scss";
 class Bar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      animate: false
-    };
+    // this.state = {
+    //   animate: false
+    // };
   }
-  componentWillMount() {
-    this.onAnimate();
-  }
-  onAnimate() {
-    setTimeout(() => {
-      this.setState({ animate: !this.state.animate });
-    }, 100);
-  }
+  // componentWillMount() {
+  //   this.onAnimate();
+  // }
+  // onAnimate() {
+  //   setTimeout(() => {
+  //     this.setState({ animate: !this.state.animate });
+  //   }, 100);
+  // }
 
   increaseByOne;
 
