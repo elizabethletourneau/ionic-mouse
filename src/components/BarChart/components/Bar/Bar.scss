@@ -1,0 +1,81 @@
+@import '../../../../themes/theme.scss';
+
+@-webkit-keyframes flex-bar {
+    0% {
+        flex: 0;
+    }
+
+    100% {
+        flex: 0 var(--bar-per);
+    }
+}
+
+@-moz-keyframes flex-bar {
+    0% {
+        flex: 0;
+    }
+
+    100% {
+        flex: 0 var(--bar-per);
+    }
+}
+
+@-o-keyframes flex-bar {
+    0% {
+        flex: 0;
+    }
+
+    100% {
+        flex: 0 var(--bar-per);
+    }
+}
+
+@keyframes flex-bar {
+    0% {
+        flex: 0;
+    }
+
+    100% {
+        flex: 0 var(--bar-per);
+    }
+}
+
+.Label {
+    width: 10%;
+    line-height: 1.5em;
+}
+
+.BarContainer {
+    display: flex;
+
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.Bar {
+    padding: 5px 10px;
+}
+
+.BarWrapper {
+    display: flex;
+    flex: 1;
+}
+
+.BarPercentage {
+    background-color: themes(secondary);
+    margin: 0 0;
+    //  width: var(--test-per, 5);
+   // flex: 0 var(--bar-per, 5);
+   // transition: 5s flex ease;
+    height: 40px;
+    border-left: black solid 2px;
+     -webkit-animation: flex-bar 2s ease-in 1 forwards;
+     -moz-animation: flex-bar 2s ease-in 1 forwards;
+     -o-animation: flex-bar 2s ease-in 1 forwards;
+     animation: flex-bar 2s ease-in 1 forwards;
+}
+
+
+.Stat {
+    padding-left: 5px;
+}
