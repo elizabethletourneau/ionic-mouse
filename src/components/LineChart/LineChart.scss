@@ -1,8 +1,8 @@
 @import '../../themes/theme.scss';
 
 .Axis {
-    border-bottom: 3px solid themes(backgroundColor);
-    border-left: 3px solid themes(backgroundColor);
+    border-bottom: 3px solid themes(secondaryDarkest);
+    border-left: 3px solid themes(secondaryDarkest);
     width: 500px;
     height: 500px;
     display: flex;

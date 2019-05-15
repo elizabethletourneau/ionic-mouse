@@ -28,15 +28,15 @@ class App extends Component {
 
   render() {
     const data = {
-      headers: ["Day", 1, 2, 3, 4],
+      headers: ["Day", 1, 2, 3, 4, 5, 6],
       values: [
-        ["Push Ups", 20, 50, 55, 51],
-        ["Design System", 8, 2, 3, 1],
-        ["Calorie Deficit", `✅`, `✅`, `🙅‍`, `🙅‍`],
-        ["8 Hours Sleep", `✅`, `✅`, `✅`, `✅`],
-        ["Glass of Water", `🙅‍`, `✅`, `✅`, `✅`],
-        ["Industry Article", `✅`, `✅`, `✅`, `🙅‍`],
-        ["Learn a Ruby Concept", `✅`, `✅`, `✅`, `🙅‍`]
+        ["Push Ups", 20, 50, 55, 51, 60, 65],
+        ["Design System", 8, 2, 3, 1, 3, 3],
+        ["Calorie Deficit", `✅`, `✅`, `🙅‍`, `🙅‍`, `🙅‍`, `🙅‍`],
+        ["8 Hours Sleep", `✅`, `✅`, `✅`, `✅`, `✅`, `🙅‍`],
+        ["Glass of Water", `🙅‍`, `✅`, `✅`, `✅`, `✅`, `✅`],
+        ["Industry Article", `✅`, `✅`, `✅`, `🙅‍`, `✅`, `✅`],
+        ["Learn a Ruby Concept", `✅`, `✅`, `✅`, `🙅‍`, `✅`, `✅`]
       ]
     };
 
@@ -59,6 +59,14 @@ class App extends Component {
       <ThemeContext.Provider value="dark">
         <Layout>
           <Navigation action items={items} />
+        </Layout>
+        <Layout>
+          <Button>More</Button>
+          <Button light>More</Button>
+          <Button>More</Button>
+          <Button>More</Button>
+          <Button>More</Button>
+          <Button>More</Button>
         </Layout>
         <Layout>
           <Table data={data} />

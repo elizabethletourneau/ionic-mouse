@@ -25,17 +25,17 @@ table{
 }
 
 th {
-    background-color: themes(backgroundColor);
-    border: 1px solid themes(backgroundColor);
+    background-color: themes(secondaryDarkest);
+    border: 1px solid themes(secondaryDarkest);
     padding: 2px 2px 2px 2px;
 }
 
 tr {
-    border-bottom: 1px solid themes(primaryColor);
+    border-bottom: 1px solid themes(primary);
     background-color: #fff;
 }
 
 td {
-    border-right: 1px solid themes(primaryColor);
+    border-right: 1px solid themes(primary);
     padding: 2px 2px 2px 2px;
 }

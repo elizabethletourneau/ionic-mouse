@@ -2,17 +2,17 @@
 
 .Navigation{
     height: 60px;
-    background-color: themes(primaryColor);
+    background-color: themes(primaryLightest);
     width: 100%;
     margin: 0;
     padding:  0 16px;
     font-family: themes(fontFamily);
     display: flex;
-       align-items: center;
-           align-content: center;
+    align-items: center;
+    align-content: center;
 
     &.DarkNavigation{
-        background-color: themes(darkBackgroundColor);
+        background-color: themes(primaryDarkest);
     }
 }
 
@@ -22,10 +22,11 @@
 
     cursor: pointer;
     margin: 0 8px;
-    color: themes(darkButtonColor);
+    color: themes(primaryDarkest);
     &:hover {
         border-bottom: 2px solid;
-        color: themes(darkButtonTextHoverColor);
+        color: themes(primaryDark);
+        padding-bottom: 10px;
         border-bottom-color: currentColor;
     }
     &:focus {
@@ -39,11 +40,12 @@
     }
 
     &.DarkItem {
-        color: themes(buttonColor);
+        color: themes(primaryLight);
 
             &:hover {
                 border-bottom: 2px solid;
-                color: themes(buttonTextHoverColor);
+                color: themes(primaryLightest);
+                padding-bottom: 10px;
                 border-bottom-color: currentColor;
             }
 

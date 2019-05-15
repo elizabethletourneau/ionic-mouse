@@ -1,33 +1,41 @@
 
 
 $themes: (
-charcoal: #36454F,
-primaryColor: #A3C6C4,
-backgroundColor: #E0E7E9,
-darkBackgroundColor: #354649,
-textColor: #354649,
 buttonTextColor: #6C7A89,
-buttonTextTransform: none,
 buttonTextHoverColor: #E0E7E9,
 darkButtonTextHoverColor: #354649,
 buttonColor: #A3C6C4,
 darkButtonColor: #36454F,
 buttonBorder: 2px solid #fff,
 buttonHoverColor: #6C7A89,
-boxShadow: "rgba(163, 198, 196) 0.5)",
+boxShadow: rgba(102, 122, 137, .3),
 fontFamily: #{BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif},
 fontWeight: 600,
 fontSize: 10px,
 
-//  dark: (backgroundColor: #222,
-//  textColor: #ddd,
-//  buttonTextColor: #aaa,
-//  buttonTextTransform: uppercase,
-//  buttonTextHoverColor: #ddd,
-//  buttonColor: #333,
-//  buttonBorder: 1px solid #aaa,
-//),
+primary: #7F678E,
+primaryLight: #9F9DBA,
+primaryLightest: #eaf2ff,
+primaryDark: #6E4C6C,
+primaryDarkest: #492D41,
+
+secondary: #94B0B7,
+secondaryLightest: #DDDDDA,
+secondaryLight: #C2C8C5,
+secondaryDark: #7697A0,
+secondaryDarkest: #4A707A,
 );
+
+
+
+// $neutralDarker:
+// $neutrayDark:
+// $neutral:
+// $neutralLight:
+// $neutralLighter:
+// $neutralLightest:
+
+
 
 @function themes($key) {
     @if map-has-key($themes, $key) {

@@ -1,33 +1,10 @@
-$themes: (
- backgroundColor: #E0E7E9,
- darkBackgroundColor: #354649,
- textColor: #354649,
- buttonTextColor: #6C7A89,
- buttonTextTransform: none,
- buttonTextHoverColor: #E0E7E9,
- buttonColor: #A3C6C4,
- buttonBorder: 2px solid #fff,
- buttonHoverColor: #6C7A89,
- boxShadow: "rgba(163, 198, 196) 0.5)",
+//to do
+//add emphasis buttons (1 -4 ) and prop
+// add color styles : primary, danger, warning, info and success
+// add states: primary, disabled, hover, focused, pressed
 
-//  dark: (backgroundColor: #222,
-//  textColor: #ddd,
-//  buttonTextColor: #aaa,
-//  buttonTextTransform: uppercase,
-//  buttonTextHoverColor: #ddd,
-//  buttonColor: #333,
-//  buttonBorder: 1px solid #aaa,
- //),
-);
+@import '../../themes/theme.scss';
 
-@function themes($key) {
-    @if map-has-key($themes, $key) {
-        @return map-get($themes, $key);
-    }
-
-    @warn "Unknown `#{$key}` in $themes.";
-    @return null;
-}
 @mixin button-reset {
     padding: 0;
     border: none;
@@ -35,40 +12,81 @@ $themes: (
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-     font-family: BlinkMacSystemFont,
+    font-family: BlinkMacSystemFont,
      -apple-system,
      'Segoe UI',
      Roboto,
      Helvetica,
      Arial,
      sans-serif;
+}
 
+$webkit: true !default;
+$moz: false !default;
+$ms: false !default;
+$o: false !default;
 
+$mediumDuration: .3s !default;
+
+@mixin grow {
+   // @include hacks();
+    @include prefixed(transition-duration, $mediumDuration);
+    @include prefixed(transition-property, transform);
+    &:hover,
+    &:focus,
+    &:active {
+        @include prefixed(transform, scale(1.1));
+    }
+}
+
+@mixin prefixed($property, $value) {
+    @if $webkit==true {
+        -webkit-#{$property}: #{$value};
+    }
+
+    @if $moz==true {
+        -moz-#{$property}: #{$value};
+    }
+
+    @if $ms==true {
+        -ms-#{$property}: #{$value};
+    }
+
+    @if $o==true {
+        -o-#{$property}: #{$value};
+    }
+
+    #{$property}: #{$value};
 }
 
 .Button {
     @include button-reset;
-    padding: 10px;
-    background-color: themes(buttonColor);
+    @include grow;
+    min-width: 64px;
+    background-color: themes(primaryDarkest); //default
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    margin: 2px 0;
+    margin: 2px 8px;
     border: solid 1px transparent;
     border-radius: 4px;
     padding: 0.5em 1em;
-    color: themes(buttonTextColor);
+    color: themes(primaryLightest);
     height: 40px;
 
+
+    //states
     &:active{
         transform: translateY(1px);
-        filter: saturate(150%); 
+        filter: saturate(150%);
     }
 
     &:hover{
-        color: themes(buttonTextHoverColor);
-        border-color: currentColor;
-        background-color: themes(buttonHoverColor);
+        color: themes(primaryDarkest);
+        border-color: transparent;
+        background-color: themes(primaryLight);
+         box-shadow: 0 0 0 3px theme(boxShadow),
+         0 0 0 1.5px theme(boxShadow);
     }
 
     &:focus{
@@ -78,23 +96,24 @@ $themes: (
     }
 
 
+
+
     outline: none;
 
     &::-moz-focus-inner {
         border: none;
-    }  
+    }
 }
 
 .LightButton {
-    border-radius: 2px;
-    background-color: transparent;
-    border-color: themes(buttonColor);
-    color: themes(buttonColor) ;
+    background-color: themes(primaryLightest);
+    border-color: themes(primaryDarkest);
+    color: themes(primaryDarkest) ;
 
     &:hover {
-        color: themes(buttonTextHoverColor);
-        border-color: currentColor;
-        background-color: themes(buttonHoverColor);
+        color: themes(primaryLightest);
+        border-color: transparent;
+        background-color: themes(primaryDark);
     }
 
     &:focus {
