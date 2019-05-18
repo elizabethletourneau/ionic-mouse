@@ -23,8 +23,12 @@ class Table extends Component {
   }
 
   totalColumns(items) {
-    const { headers } = this.state;
-    return items.length < headers.length ? Math.ceil(headers.length/items.length) : 1;
+    const { headers, values } = this.state;
+      const valueLengths = values.map(list => {
+        return list.length;
+      });
+      const maxLength = Math.max(...valueLengths);
+    return maxLength.length < headers.length ? Math.ceil(headers.length/items.length) : 1;
   }
 
   render() {
