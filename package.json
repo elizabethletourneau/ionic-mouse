@@ -7,7 +7,9 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack -p --mode production",
     "start": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [],
   "author": "Elizabeth Letourneau",
@@ -32,7 +34,11 @@
     "webpack-cli": "^3.3.1",
     "webpack-dev-server": "^3.3.1",
     "react-transition-group": "^2.4.0",
-    "tar": ">=4.4.2"
+    "tar": ">=4.4.2",
+    "@storybook/react": "^5.0.11",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addons": "^5.0.11"
   },
   "dependencies": {
     "react": "^16.8.1",
