@@ -1,66 +1,17 @@
 @import '../../themes/theme.scss';
 
 .Navigation{
-    height: 60px;
     background-color: themes(primaryLightest);
     width: 100%;
     margin: 0;
-    padding:  0 16px;
+    padding:  16px 20px;
     font-family: themes(fontFamily);
     display: flex;
     align-items: center;
     align-content: center;
+    height: 30px;
 
     &.DarkNavigation{
         background-color: themes(primaryDarkest);
     }
-}
-
-.NavigationItem {
-
-
-
-    cursor: pointer;
-    margin: 0 8px;
-    color: themes(primaryDarkest);
-    &:hover {
-        border-bottom: 2px solid;
-        color: themes(primaryDark);
-        padding-bottom: 10px;
-        border-bottom-color: currentColor;
-    }
-    &:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px #000,
-            0 0 0 1.5px #000;
-    }
-    outline: none;
-    &::-moz-focus-inner {
-        border: none;
-    }
-
-    &.DarkItem {
-        color: themes(primaryLight);
-
-            &:hover {
-                border-bottom: 2px solid;
-                color: themes(primaryLightest);
-                padding-bottom: 10px;
-                border-bottom-color: currentColor;
-            }
-
-            &:focus {
-                outline: none;
-                box-shadow: 0 0 0 3px #fff,
-                    0 0 0 1.5px #fff;
-            }
-
-            outline: none;
-
-            &::-moz-focus-inner {
-                border: none;
-            }
-        }
-
-
 }

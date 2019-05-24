@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styles from './Navigation.scss';
-import Button from '../Button';
+import {Logo, Item} from './components';
 import classNames from '../../utilies/classnames';
+
+
 
 class Navigation extends Component {
 
@@ -12,21 +14,23 @@ class Navigation extends Component {
           this.props.dark && styles.DarkNavigation
         );
 
-        const navItemClassName = classNames(
-               styles.NavigationItem,
-               this.props.dark && styles.DarkItem
-             );
 
-        const {action} = this.props;
+        const {action, url, dark} = this.props;
 
-        const itemsMarkup = this.props.items.map((item, index) => <span className={navItemClassName} key={index}> {item.name} </span>);
+        const logoMarkup = url ? <Logo url={url}/> : null;
+
+        const itemsMarkup = this.props.items.map((item, index) =>
+        <Item dark={dark} key={index} item={item}></Item>
+
+    );
 
 
         const actionMarkup = action ? itemsMarkup : null;
         return (
-            <div className={className}>
-                {actionMarkup}
-            </div>
+          <div className={className}>
+            {logoMarkup}
+            {actionMarkup}
+          </div>
         );
     }
 }
